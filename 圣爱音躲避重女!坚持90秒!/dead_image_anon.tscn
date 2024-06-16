@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwmi1gxpdi3b"]
+
+[ext_resource type="Script" path="res://dead_image_anon.gd" id="1_5xr8f"]
+[ext_resource type="Texture2D" uid="uid://cnypnctw4pgl5" path="res://art/mygoart/anon_dead01.jpg" id="1_whwms"]
+[ext_resource type="Texture2D" uid="uid://blsq5ilxmy5q5" path="res://art/mygoart/anon_dead02.jpg" id="2_sm7gq"]
+[ext_resource type="Texture2D" uid="uid://drtflx41vhsd" path="res://art/mygoart/anon_dead03.jpg" id="3_4q5f4"]
+[ext_resource type="Texture2D" uid="uid://0cn08yyy5teq" path="res://art/mygoart/anon_dead04.jpg" id="4_k3evx"]
+[ext_resource type="Texture2D" uid="uid://bnppmhp0etve1" path="res://art/mygoart/anon_dead05.jpg" id="5_2d12b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eyyej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_whwms")
+}],
+"loop": true,
+"name": &"dead01",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sm7gq")
+}],
+"loop": true,
+"name": &"dead02",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4q5f4")
+}],
+"loop": true,
+"name": &"dead03",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k3evx")
+}],
+"loop": true,
+"name": &"dead04",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2d12b")
+}],
+"loop": true,
+"name": &"dead05",
+"speed": 5.0
+}]
+
+[node name="Dead_image_anon" type="Area2D"]
+script = ExtResource("1_5xr8f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_eyyej")
+animation = &"dead01"
